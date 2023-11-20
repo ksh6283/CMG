@@ -79,7 +79,7 @@ const ImageUploader = () => {
     formData.append('key', key);
 
     // You can use the fetch API to send the file and key to the server
-    fetch('/upload', {
+    fetch('5000/upload', {
       method: 'POST',
       body: formData,
     })
@@ -97,7 +97,7 @@ const ImageUploader = () => {
 
   const retrieveUrl = () => {
     // You can use the fetch API to retrieve the URL based on the entered key
-    fetch(`/getUrl?key=${enteredKey}`)
+    fetch(`5000/outpus/key=${enteredKey}`)
       .then((response) => response.json())
       .then((data) => {
         console.log('Retrieved URL:', data.url);
